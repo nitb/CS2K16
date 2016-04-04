@@ -1,0 +1,101 @@
+				
+LAB ASSIGNMENT 1
+
+----------------------------
+
+Author:  	XYZ (@switchkiller)
+Scholar: 	14111zZzZ
+Subject: 	DBMS LAB
+University: MANIT
+
+----------------------------
+
+
+CREATE DATABASE lab;
+
+USE lab;
+
+1.
+
+mysql>CREATE TABLE COUNTRIES 
+		( country_id int NOT NULL,
+		country_name VARCHAR(15),
+		region_id int NOT NULL,
+		PRIMARY KEY (country_id));
+
+2.
+
+mysql>INSERT INTO COUNTRIES VALUES (1,'INDIA', 'MP');
+	 INSERT INTO COUNTRIES VALUES (1,'NEPAL', 'KTM');
+	 INSERT INTO COUNTRIES VALUES (3,'USA', 'NJ');
+	 INSERT INTO COUNTRIES VALUES (4,'USA', 'NY');
+	 INSERT INTO COUNTRIES VALUES (5,'CANADA', 'ONTARIO');
+
+3.
+
+mysql>CREATE TABLE JOBS ( 
+		job_id INT, job_title VARCHAR(15), min_salary INT, 			max_salary INT, CHECK ( max_salary < 25000 ) );
+
+4.
+
+mysql>CREATE TABLE COUNTRIES 
+		( country_id int NOT NULL,
+		country_name VARCHAR(15),
+		region_id int NOT NULL,
+		PRIMARY KEY (country_id));
+
+5.
+
+mysql>CREATE TABLE COUNTRIES 
+		( country_id int NOT NULL AUTO INCREMENT,
+		country_name VARCHAR(15),
+		region_id int NOT NULL,
+		PRIMARY KEY (country_id));
+
+
+6.
+
+mysql>CREATE TABLE EMPLOYEE(
+		ID INT NOT NULL, NAME VARCHAR(15), 
+   		DESIGNATION VARCHAR(15), LOCATION VARCHAR(15), 
+		SALARY INT, EMAIL VARCHAR(25) DEFAULT 'NOT AVIALABLE');
+
+7.
+
+mysql>UPDATE EMPLOYEE  
+		SET SALARY = 8000 
+			WHERE ID = 105 AND SALARY 	< 5000;
+
+
+
+8.
+
+mysql>RENAME COUNTRIES TO COUNTRIES_NEW;
+
+or
+
+mysql>ALTER TABLE COUNTRIES RENAME COUNTRIES_NEW;
+
+9.
+
+mysql>ALTER TABLE COUNTRY_NEW  ADD COLUMN ID INT NOT NULL FIRST;
+
+10.
+
+mysql>ALTER TABLE EMPLOYEE ADD PRIMARY KEY (ID, SALARY);
+
+
+
+
+
+
+
+
+
+
+
+
+
+					------------------
+						THE END
+					------------------
