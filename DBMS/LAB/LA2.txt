@@ -1,0 +1,66 @@
+LAB ASSIGNMENT 2
+
+----------------------------
+
+Author:  	XYZ (@switchkiller)
+Scholar: 	14111zZzZ
+Subject: 	DBMS LAB
+University: MANIT
+
+----------------------------
+
+1.
+
+mysql>SELECT COUNT(DISTINCT job_id) 
+		FROM EMPLOYEES;
+
+2.
+mysql>SELECT SUM(salary) 
+		FROM EMPLOYEES;
+
+3.
+mysql>SELECT MAX(salary)
+		FROM EMPLOYEES
+			WHERE job_id LIKE 'IT_PROG';
+
+4.
+mysql>SELECT ROUND(MAX(salary),0) 'Maximum',
+	  	ROUND(MIN(salary),0) 'Minimum', 
+	  	ROUND(SUM(salary),0) 'Sum', 	  
+	  	ROUND(AVG(salary),0) 'Average' 
+ 		FROM EMPLOYEES;
+
+5.
+mysql>SELECT FIRST_NAME, LAST_NAME
+		FROM EMPLOYEES
+			WHERE JOB_ID LIKE 'MANAGER';
+
+6.
+mysql>SELECT department_name AS 'Department Name', 
+	COUNT(*) AS 'No of Employees' 
+		FROM departments 
+		INNER JOIN employees 
+		ON employees.department_id = departments.department_id 
+			GROUP BY departments.department_id, department_name 
+			ORDER BY department_name;
+
+7.
+mysql>SELECT  FIRST_NAME
+		FROM EMPLOYEES
+			WHERE FIRST_NAME LIKE 'a%';
+
+8.
+mysql>SELECT job_title, AVG(salary) 
+		FROM EMPLOYEES
+		NATURAL JOIN JOBS 
+			GROUP BY job_title;
+
+9.
+mysql>SELECT first_name, last_name, salary 
+		FROM EMPLOYEES
+			WHERE salary NOT BETWEEN 10000 AND 15000;
+
+10.
+mysql>SELECT last_name 
+		FROM employees 
+			WHERE last_name LIKE '______';
