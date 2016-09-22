@@ -1,5 +1,6 @@
 // Note:
 // If your production statements contain multiple terms connected by '|'  then give these terms as separate productions
+
 #include<stdio.h>
 #include<string.h>
 int n,m=0,p,i=0,j=0;

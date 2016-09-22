@@ -1,3 +1,6 @@
+// Scholar Number: 141112006
+// Barun Singhania
+
 #include<stdio.h>
 #include<string.h>
 
@@ -86,7 +89,7 @@ int main()
     for(i=0;i<10;i++)
         pro[i].n=0;
 
-    f=fopen("tab5.txt","r");
+    f=fopen("text.txt","r");
     while(!feof(f))
     {
         fscanf(f,"%s",pro[n].lhs);
